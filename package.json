@@ -1,0 +1,63 @@
+{
+  "name": "react-redux-typescript-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": ">=18.9.0"
+  },
+  "scripts": {
+    "prepare": "husky install",
+    "clean": "rm -rf node_modules && yarn",
+    "precommit": "yarn prettier:fix && yarn lint:fix && yarn test:coverage",
+    "start": "webpack serve --config=webpack.dev.config.js",
+    "restart": "webpack serve --config=webpack.dev.config.js --no-open",
+    "build": "webpack --config=webpack.config.js",
+    "build:local": "webpack --config=webpack.dev.config.js",
+    "build:staging": "webpack --config=webpack.staging.config.js",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint .",
+    "lint:fix": "eslint .",
+    "prettier": "prettier --check .",
+    "prettier:fix": "prettier --write ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.9.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^8.0.5",
+    "whatwg-fetch": "^3.6.2"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@types/jest": "^29.4.0",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.10",
+    "@typescript-eslint/eslint-plugin": "^5.52.0",
+    "@typescript-eslint/parser": "^5.52.0",
+    "css-loader": "^6.7.3",
+    "eslint": "^8.34.0",
+    "eslint-plugin-jest": "^27.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "html-webpack-plugin": "^5.5.0",
+    "husky": "^8.0.3",
+    "jest": "^29.4.2",
+    "jest-environment-jsdom": "^29.4.2",
+    "mini-css-extract-plugin": "^2.7.2",
+    "node-sass": "^8.0.0",
+    "prettier": "^2.8.4",
+    "sass-loader": "^13.2.0",
+    "style-loader": "^3.3.1",
+    "ts-jest": "^29.0.5",
+    "ts-loader": "^9.4.2",
+    "typescript": "^4.9.5",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1",
+    "webpack-merge": "^5.8.0"
+  }
+}
